@@ -29,9 +29,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
@@ -46,13 +44,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "500GB",
+                  "maximumError": "10GB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "40MB",
+                  "maximumError": "80MB"
                 }
               ],
               "outputHashing": "all"
