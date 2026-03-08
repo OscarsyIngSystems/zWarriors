@@ -26,7 +26,7 @@ export class GetData {
   private handleError(error: any): Observable<never> {
     console.error('Error en la petición HTTP:', error);
 
-    let errorMessage = 'Error desconocido';
+    let errorMessage = 'La comunicación con el planeta Namek ha fallado';
 
     if (error.error instanceof ErrorEvent) {
 
@@ -59,7 +59,7 @@ export class GetData {
   getItemById(id: number): Observable<any> {
     return this.http.get<any>(`${this.API_URL}/${id}`).pipe(
       map((response: any) => {
-        console.log('Respuesta de la API:', response);
+
 
       }
       ),
