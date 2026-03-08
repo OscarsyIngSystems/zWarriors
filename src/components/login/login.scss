@@ -1,0 +1,21 @@
+.card-login {
+  width: 25rem;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+.img-card {
+  width: 40%;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

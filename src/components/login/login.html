@@ -1,0 +1,54 @@
+<div class="mb-4 p-8 flex items-center justify-center">
+  <p-card class="card-login">
+    <ng-template #header>
+      <div class="container-img">
+        <img alt="Card" class="img-card" src="/assets/logo.png" />
+      </div>
+    </ng-template>
+    <ng-template #title> <p class="text-center">Iniciar sesión</p> </ng-template>
+    <ng-template #subtitle> <p>Z-Warriors Admin Panel</p> </ng-template>
+    <form class="pt-5">
+      <div class="form-group py-5">
+        <p-floatlabel>
+          <input class="w-full" id="username" pInputText [formField]="loginForm.email" />
+          <label for="username">Email</label>
+        </p-floatlabel>
+
+        <!-- validaciones -->
+        @if (loginForm.email().touched() && loginForm.email().invalid()) {
+          <ul class="error-list">
+            @for (error of loginForm.email().errors(); track error) {
+              <li class="error-message">{{ error.message }}</li>
+            }
+          </ul>
+        }
+      </div>
+
+      <div class="form-group py-5">
+        <p-floatlabel>
+          <input
+            class="w-full"
+            type="password"
+            id="password"
+            pInputText
+            [formField]="loginForm.password"
+          />
+          <label for="password">Contraseña</label>
+        </p-floatlabel>
+        <!-- validaciones -->
+        @if (loginForm.password().touched() && loginForm.password().invalid()) {
+          <div class="error-list">
+            @for (error of loginForm.password().errors(); track error) {
+              <p class="error-message">{{ error.message }}</p>
+            }
+          </div>
+        }
+      </div>
+    </form>
+    <ng-template #footer>
+      <div class="flex gap-4 mt-1">
+        <p-button (click)="onSubmit($event)" label="Entrar" class="w-full" styleClass="w-full" />
+      </div>
+    </ng-template>
+  </p-card>
+</div>

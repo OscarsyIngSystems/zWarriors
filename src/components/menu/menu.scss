@@ -1,0 +1,16 @@
+.container-swich {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container-end {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+}
+
+.exit {
+  padding: 0 0.5rem;
+}

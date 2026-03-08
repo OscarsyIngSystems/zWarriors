@@ -1,0 +1,19 @@
+<div class="card">
+  <p-menubar [model]="items">
+    <ng-template #end>
+      <div class="container-end">
+        <div class="container-swich">
+          <i class="pi pi-sun"></i>
+          <p-toggleswitch [ngModel]="checked()" (ngModelChange)="onThemeChange($event)">
+            <ng-template #handle let-checked="checked"> </ng-template>
+          </p-toggleswitch>
+          <i class="pi pi-moon"></i>
+        </div>
+
+        <div class="pointer" (click)="onSingOut()">
+          <i class="pi pi-sign-out pointer"> <label class="exit pointer" for="">salir</label></i>
+        </div>
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>
